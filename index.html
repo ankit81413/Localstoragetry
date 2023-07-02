@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ES8 Project</title>
+
+  <script src="//unpkg.com/systemjs@0.19.47/dist/system.js"></script>
+</head>
+
+
+<body>
+  <h1>index1</h1>
+  <a href="/index2.html">/index2.html</a>
+  <input type="text" id="input">
+  <button onclick="save()">save</button>
+  <button onclick="show()">click</button>
+  <div id="param">
+    
+  </div>
+</body>
+ <script>
+ function save(){
+   
+   var kala= document.getElementById("input").value;
+   localStorage.setItem("value",kala);
+   
+ }
+
+   function show(){
+     var parse = localStorage.getItem("value");
+     document.getElementById("param").innerHTML=parse;
+   }
+   
+ </script>
+</html>
